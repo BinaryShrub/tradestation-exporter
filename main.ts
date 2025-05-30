@@ -26,6 +26,8 @@ const main = async () => {
     );
   }
 
+  executions.sort((a, b) => a.tradeDate.getTime() - b.tradeDate.getTime());
+
   const formatDate = (date: Date) =>
     date.toISOString().slice(0, 10).replace(/-/g, "");
 
