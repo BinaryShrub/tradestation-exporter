@@ -2,6 +2,11 @@ import { config } from "https://deno.land/x/dotenv@v1.0.1/mod.ts";
 
 const env = config();
 
+
+const fromStartOf = new Date("2024-01-01");
+
+const toEndOf = new Date(); // Today's date
+
 const symbolByContact: { [key: string]: string } = {
   "DEC 24 CME MCRO NSDQ": "MNQZ2024",
   "DEC 24 CME MICRO S&P": "MESZ4",
@@ -21,11 +26,7 @@ const symbolByContact: { [key: string]: string } = {
 };
 
 const main = async () => {
-  const fromStartOf = new Date("2024-01-01");
-  const toEndOf = new Date();
-
   const executions: Execution[] = [];
-
   const accountIds = env.ACCOUNT_ID_LIST.includes(",")
       ? env.ACCOUNT_ID_LIST.split(",")
       : [env.ACCOUNT_ID_LIST]
