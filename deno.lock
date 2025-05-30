@@ -1,0 +1,12 @@
+{
+  "version": "5",
+  "remote": {
+    "https://deno.land/x/dotenv@v1.0.1/mod.ts": "63fd3efe09577aa68749fe6c881edba2530156834bd94effbd4a93501a341ebb",
+    "https://deno.land/x/dotenv@v1.0.1/util.ts": "15875ce1e2840d3d3c7b0f74d699218be065c23accd0737993cbf51ea216d0c5"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1"
+    ]
+  }
+}
