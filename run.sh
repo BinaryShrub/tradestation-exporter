@@ -1,2 +1,2 @@
 #!/bin/bash
-npx --yes deno run -A main.ts > output.json
+npx --yes deno run -A main.ts
