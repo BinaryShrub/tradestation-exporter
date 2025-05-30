@@ -23,4 +23,4 @@ Bulk export tradestation executions for multiple accounts across any timeframe:
 
     const toEndOf = new Date(); // Today's date
 
-4. Run `./run.sh` and the export will run and write an `executions.csv` file.
+4. Run `./run.sh` and the export will run and write an executions csv file.

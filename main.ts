@@ -26,6 +26,11 @@ const main = async () => {
     );
   }
 
+  const formatDate = (date: Date) =>
+    date.toISOString().slice(0, 10).replace(/-/g, "");
+
+  const filename = `executions.${formatDate(fromStartOf)}.${formatDate(toEndOf)}.csv`;
+
   writeCsv(
     [
       "accountId",
@@ -40,7 +45,7 @@ const main = async () => {
       "commissionUSD",
     ],
     executions,
-    "executions.csv",
+    filename,
   );
 };
 
