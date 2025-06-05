@@ -26,7 +26,7 @@ const main = async () => {
   }
 
   transactions.sort((a, b) => {
-    const dateDiff = a.date.getTime() - b.date.getTime();
+    const dateDiff = b.date.getTime() - a.date.getTime();
     if (dateDiff !== 0) return dateDiff;
     return a.accountId.localeCompare(b.accountId);
   });
@@ -107,8 +107,8 @@ const loadAllTransactions = async (config: {
     });
     transactions.push(...chunkCash);
 
-    // 2 QPS
-    await new Promise((res) => setTimeout(res, 1000));
+    // 1 QPS
+    await new Promise((res) => setTimeout(res, 500));
 
     current = new Date(chunkEnd);
   }
